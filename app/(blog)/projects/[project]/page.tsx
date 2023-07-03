@@ -11,7 +11,7 @@ export default async function Project({ params }: Props) {
   const project = await getProject(slug);
 
   return (
-    <div className="max-w-3xl mx-auto py-20">
+    <div>
       <header className="flex items-center justify-between">
         <h1 className="text-blue-500 text-7xl font-extrabold">
           {project.name}
