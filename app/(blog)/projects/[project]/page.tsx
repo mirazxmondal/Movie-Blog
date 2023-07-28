@@ -16,21 +16,8 @@ export default async function Project({ params }: Props) {
         <h1 className="text-blue-500 text-7xl font-extrabold">
           {project.name}
         </h1>
-        <a
-          href="{project.url}"
-          title="View Blog"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-blue-500 rounded-lg font-bold py-3 px-4 whitespace-nowrap hover:bg-pink-500 hover:text-pink-100 transiiton"
-        >
-          View blog
-        </a>
       </header>
       <main>
-        {/* Content Section */}
-        <div className="text-lg text-gray-500 mt-5">
-          <PortableText value={project.content} />
-        </div>
         {/* Image Section */}
         <Image
           src={project.image}
@@ -39,6 +26,10 @@ export default async function Project({ params }: Props) {
           height={1080}
           className="mt-10 rounded-xl object-cover"
         />
+        {/* Content Section */}
+        <div className="text-lg text-gray-500 mt-5">
+          <PortableText value={project.content} />
+        </div>
       </main>
     </div>
   );
