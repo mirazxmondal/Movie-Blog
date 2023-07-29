@@ -1,6 +1,6 @@
 import { createClient, groq } from "next-sanity";
 import { Project } from "@/types/project";
-import clientConfig from './config/client-config'
+import clientConfig from "./config/client-config";
 import { Page } from "@/types/page";
 
 export async function getProjects(): Promise<Project[]> {
@@ -14,7 +14,7 @@ export async function getProjects(): Promise<Project[]> {
       url,
       content
     }`
-  )
+  );
 }
 
 export async function getProject(slug: string): Promise<Project> {
@@ -29,7 +29,7 @@ export async function getProject(slug: string): Promise<Project> {
       content
     }`,
     { slug }
-  )
+  );
 }
 
 export async function getPages(): Promise<Page[]> {
@@ -40,7 +40,7 @@ export async function getPages(): Promise<Page[]> {
       title,
       "slug": slug.current
     }`
-  )
+  );
 }
 
 export async function getPage(slug: string): Promise<Page> {
@@ -53,5 +53,5 @@ export async function getPage(slug: string): Promise<Page> {
       content
     }`,
     { slug }
-  )
+  );
 }

@@ -1,5 +1,7 @@
 ## Movie Blog
+
 This is a blog application where I share my favorite movie blogs
+
 ## Getting Started
 
 First, run the development server:
